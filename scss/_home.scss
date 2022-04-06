@@ -1,0 +1,35 @@
+.home{
+    height: 100%;
+    text-align: center;
+    @include flex(column);
+    @include flex-item(center, center);
+    background: linear-gradient(to right, rgba($primary-colour, 0.9), rgba($primary-colour, 0.3)),
+     url('/dist/img/model-1.jpg') center top; 
+    background-size: cover;
+
+    h2{
+        margin-top: 2rem;
+        font-size: 1.9rem;
+    }
+
+    &__name{
+        width: 100%;
+        font-size: unquote("clamp(3.5rem, 14vw + 1rem, 5rem)");
+        margin-top: 0.4rem;
+        padding-bottom: 2rem;
+        border-bottom: 4px solid $text-colour;
+        
+        &--last {
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: $secondary-colour;
+    }
+
+    }
+
+    h2:nth-of-type(2){
+        margin-top: 1rem;
+        padding: 0 2px;
+    }
+}
